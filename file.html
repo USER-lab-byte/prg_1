@@ -3,54 +3,231 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <title>Web Innovators Battle</title>
+    <style>
+        /* General Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #ffffff;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: #1f1f1f;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 1rem;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 18px;
+            transition: 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #61dafb;
+        }
+
+        /* Section Styling */
+        section {
+            padding: 80px 20px;
+            text-align: center;
+            color: #ffffff;
+        }
+
+        section h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #61dafb;
+        }
+
+        section p {
+            font-size: 18px;
+            margin-bottom: 40px;
+        }
+
+        /* Home Section with Background Image */
+        #home {
+            background-image: url('https://cdn.pixabay.com/photo/2016/10/25/12/28/website-1772211_1280.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #ffffff;
+        }
+
+        #home h1 {
+            font-size: 48px;
+            margin-top: 80px;
+            color: #ffffff;
+            text-shadow: 2px 2px 8px #000000;
+        }
+
+        #home p {
+            font-size: 24px;
+            margin-bottom: 0;
+        }
+
+        /* Card Layout for Other Sections */
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .card {
+            background-color: #1f1f1f;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+            margin: 20px;
+            width: 300px;
+            padding: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card h2 {
+            font-size: 24px;
+            color: #61dafb;
+        }
+
+        .card p {
+            font-size: 16px;
+            color: #cccccc;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1f1f1f;
+            color: #61dafb;
+            text-align: center;
+            padding: 2rem;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Welcome to My Portfolio</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section id="about">
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#awards">Awards</a></li>
+            <li><a href="#publications">Publications</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home">
+        <h1>Welcome to My Creative Portfolio</h1>
+        <p>Exploring the journey of learning, innovation, and design.</p>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about">
+        <div class="card-container">
             <div class="card">
                 <h2>About Me</h2>
-                <img src="https://placekitten.com/200/200" alt="Random Cat" class="profile-pic">
-                <p>Hi, I'm [Your Name], a passionate Computer Science student with a deep interest in AI, web design, and innovation.</p>
+                <p>Hi, I'm Arunaditya Bhattacharjee, a passionate Computer Science student with a deep interest in AI, web design, and innovation.</p>
             </div>
-        </section>
-        <section id="projects">
-            <h2>My Projects</h2>
-            <div class="card-container">
-                <div class="card">
-                    <h3>Project 1</h3>
-                    <p>Description of Project 1 goes here.</p>
-                </div>
-                <div class="card">
-                    <h3>Project 2</h3>
-                    <p>Description of Project 2 goes here.</p>
-                </div>
-                <div class="card">
-                    <h3>Project 3</h3>
-                    <p>Description of Project 3 goes here.</p>
-                </div>
+        </div>
+    </section>
+
+    <!-- Educational Background Section -->
+    <section id="education">
+        <div class="card-container">
+            <div class="card">
+                <h2>Educational Background</h2>
+                <p>B.Tech in Computer Science and Engineering from University of Engineering Management(UEM). I'm currently expanding my skills in AI and Data Science.</p>
             </div>
-        </section>
-        <section id="contact">
-            <h2>Contact Me</h2>
-            <p>Email: your-email@example.com</p>
-            <p>Phone: +1234567890</p>
-        </section>
-    </main>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience">
+        <div class="card-container">
+            <div class="card">
+                <h2>Experience</h2>
+                <p>I have hands-on experience in various tech projects and have worked on multiple research papers. I've also interned at Tata Consultancy Services (TCS).</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="card-container">
+            <div class="card">
+                <h2>Projects</h2>
+                <p>1. AI-powered chatbot for educational purposes.<br>2. Website design for a non-profit organization.<br>3. IoT-enabled health monitoring system.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Awards Section -->
+    <section id="awards">
+        <div class="card-container">
+            <div class="card">
+                <h2>Awards & Achievements</h2>
+                <p>Winner of Hackathon 2024, published 2 research papers, and participated in several national-level tech competitions.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section id="publications">
+        <div class="card-container">
+            <div class="card">
+                <h2>Publications</h2>
+                <p>1. "AI in Healthcare" - IEEE 2023<br>2. "IoT for Smart Cities" - Springer 2022.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="card-container">
+            <div class="card">
+                <h2>Contact</h2>
+                <p>Email: arunadityabhattacharjee@gmail.com<br>Phone: 8910260774<br>Address: 125 PK Guha Lane Kolkata-700028</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Your Name. All rights reserved.</p>
+        <p>© 2024 Web Innovators Battle. All rights reserved.</p>
     </footer>
-    <script src="script.js"></script> <!-- Link to your JavaScript file -->
+
 </body>
 </html>
